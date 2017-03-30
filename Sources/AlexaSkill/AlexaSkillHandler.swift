@@ -12,6 +12,7 @@ public class AlexaSkillHandler : RequestHandler {
     
     public func handleIntent(request: IntentRequest, session: Session, next: @escaping (StandardResult) -> ()) {
         let standardResponse = generateResponse(message: "Alexa Skill received intent \(request.intent.name)")
+        //testing travis
         next(.success(standardResponse: standardResponse, sessionAttributes: session.attributes))
     }
     
